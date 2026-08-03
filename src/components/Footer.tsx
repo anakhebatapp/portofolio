@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex items-center justify-center md:justify-start gap-2">
               <span className="font-black text-lg text-white tracking-tight">Wendra Bagas Saputra</span>
               <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30">
-                S.Kom
+                S.Pd
               </span>
             </div>
             <p className="text-slate-400 text-xs max-w-md">

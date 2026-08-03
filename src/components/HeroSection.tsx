@@ -27,7 +27,7 @@ export default function HeroSection() {
               </div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-semibold">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Calon Guru Penggerak</span>
+                <span>Guru Penggerak Angkatan 10</span>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ export default function HeroSection() {
                     {/* Dark gradient overlay at bottom for text contrast */}
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#070b14] via-[#070b14]/70 to-transparent p-3 pt-6 text-center">
                       <h3 className="font-bold text-sm text-white tracking-tight drop-shadow">Wendra Bagas Saputra</h3>
-                      <p className="text-[11px] text-sky-300 font-semibold drop-shadow">S.Kom — Guru PPLG</p>
+                      <p className="text-[11px] text-sky-300 font-semibold drop-shadow">S.Pd — Guru PPLG</p>
                     </div>
 
                     {/* Badge Overlay */}

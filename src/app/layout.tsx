@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: '%s | Wendra Bagas Saputra',
   },
   description:
-    'Website Portofolio Profesional Wendra Bagas Saputra, S.Kom — Guru PPLG di SMKN 1 Kawunganten, Calon Guru Penggerak (CGP), & Full-Stack Software Developer spesialis Sistem Web Sekolah dan Aplikasi Android Play Store.',
+    'Website Portofolio Profesional Wendra Bagas Saputra, S.Pd — Guru PPLG di SMKN 1 Kawunganten, Guru Penggerak Angkatan 10, & Full-Stack Software Developer spesialis Sistem Web Sekolah dan Aplikasi Android Play Store.',
   keywords: [
     'Wendra Bagas Saputra',
     'Portofolio Wendra Bagas',

@@ -9,6 +9,7 @@ export interface Project {
   url?: string;
   playStoreUrl?: string;
   imageBg: string;
+  screenshot?: string;
   stats?: { label: string; value: string }[];
   featured?: boolean;
 }
@@ -25,7 +26,7 @@ export const PROFILE_DATA = {
   bio: "Pendidik berdedikasi tinggi sekaligus Software Developer yang berfokus membangun solusi digital inovatif di bidang Pendidikan (EdTech), Manajemen Sekolah, dan Aplikasi Mobile. Berpengalaman dalam merancang dan mengembangkan sistem web berskala instansi hingga aplikasi Android untuk ribuan pengguna.",
   location: "Cilacap, Jawa Tengah, Indonesia",
   email: "wendrabagas@gmail.com",
-  phone: "+62 857-4286-9050",
+  phone: "089668379034",
   customDomain: "wendrabagas.my.id",
   socials: {
     github: "https://github.com",
@@ -42,9 +43,16 @@ export const PROFILE_DATA = {
   ],
   roles: [
     "Guru PPLG (Pengembangan Perangkat Lunak & Gim)",
-    "Calon Guru Penggerak (CGP)",
+    "Guru Penggerak Angkatan 10",
     "Full-Stack Web & Mobile Developer",
     "Pembimbing Teaching Factory (TEFA)"
+  ],
+  certifications: [
+    {
+      title: "Adobe Certified Professional — Graphic Design & Illustration",
+      issuer: "Adobe",
+      file: "/certificates/sertifikat-adobe-graphic-design.pdf"
+    }
   ]
 };
 
@@ -59,6 +67,7 @@ export const WEB_PROJECTS: Project[] = [
     tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "MySQL", "Geofencing API"],
     url: "https://ejurnal.smk1kawunganten.sch.id",
     imageBg: "from-blue-600 to-indigo-900",
+    screenshot: "/images/ss-epkl.png",
     stats: [
       { label: "Pengguna Aktif", value: "1.000+ Siswa" },
       { label: "Mitra Industri", value: "50+ Perusahaan" }
@@ -75,6 +84,7 @@ export const WEB_PROJECTS: Project[] = [
     tags: ["Laravel", "Alpine.js", "Tailwind CSS", "MySQL", "LMS Engine"],
     url: "https://lmsliterasikeuangan.fwh.is/",
     imageBg: "from-emerald-600 to-teal-900",
+    screenshot: "/images/ss-lms.png",
     stats: [
       { label: "Modul Pembelajaran", value: "4 Modul Utama" },
       { label: "Fokus", value: "ESG & Green Finance" }
@@ -91,6 +101,7 @@ export const WEB_PROJECTS: Project[] = [
     tags: ["React", "Next.js", "Chart.js", "REST API", "Tailwind CSS"],
     url: "https://teachingschooluad.vercel.app/login",
     imageBg: "from-sky-700 to-slate-900",
+    screenshot: "/images/ss-eteaching.png",
     stats: [
       { label: "Keaktifan Dosen", value: "98%" },
       { label: "Instansi Mitra", value: "5+ Sekolah" }
@@ -107,6 +118,7 @@ export const WEB_PROJECTS: Project[] = [
     tags: ["Next.js", "PHP", "Tailwind CSS", "MySQL", "Cloudflare"],
     url: "https://ppdb.smk1kawunganten.sch.id/",
     imageBg: "from-cyan-600 to-blue-900",
+    screenshot: "/images/ss-spmb.png",
     stats: [
       { label: "Total Pendaftar", value: "1.030+ Siswa" },
       { label: "Status Dokumen", value: "Real-time Verification" }
@@ -123,6 +135,7 @@ export const WEB_PROJECTS: Project[] = [
     tags: ["Next.js", "Tailwind CSS", "Framer Motion", "Vercel"],
     url: "https://visualoka.com",
     imageBg: "from-purple-600 to-pink-900",
+    screenshot: "/images/ss-visualoka.png",
     stats: [
       { label: "Karya Terpajang", value: "100+ Visual Works" },
       { label: "Unit Usaha", value: "TEFA DKV" }
@@ -142,6 +155,7 @@ export const MOBILE_APPS: Project[] = [
     tags: ["Android", "Kotlin", "Firebase", "Material Design 3"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.saka.ebusafila",
     imageBg: "from-red-600 to-amber-700",
+    screenshot: "/images/ss-ebusafilla.webp",
     stats: [
       { label: "Platform", value: "Android (Play Store)" },
       { label: "Kategori", value: "Education" }
@@ -157,6 +171,7 @@ export const MOBILE_APPS: Project[] = [
     tags: ["Android", "Flutter / Native", "Local Storage", "Push Notification"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.anakhebat.habittracker",
     imageBg: "from-green-600 to-emerald-800",
+    screenshot: "/images/ss-anakhebat.webp",
     stats: [
       { label: "Target", value: "Siswa & Orang Tua" },
       { label: "Rating", value: "5.0 ★★★★★" }
@@ -172,6 +187,7 @@ export const MOBILE_APPS: Project[] = [
     tags: ["Android", "Java/Kotlin", "RESTful API", "Camera & Location API"],
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.saka.epkl",
     imageBg: "from-blue-700 to-cyan-900",
+    screenshot: "/images/ss-epkl-app.webp",
     stats: [
       { label: "Integrasi", value: "ePKL Web Engine" },
       { label: "Status", value: "Published" }
@@ -207,14 +223,15 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Android Native (Kotlin/Java)", icon: "Smartphone", level: "Advanced" },
       { name: "Git & GitHub", icon: "GitBranch", level: "Expert" },
       { name: "Vercel & Cloudflare", icon: "Cloud", level: "Advanced" },
-      { name: "Figma UI/UX", icon: "Figma", level: "Intermediate" }
+      { name: "Figma UI/UX", icon: "Figma", level: "Intermediate" },
+      { name: "Adobe Graphic Design", icon: "Pen", level: "Certified" }
     ]
   },
   {
     title: "Pedagogi & Kepemimpinan",
     skills: [
       { name: "Kurikulum Merdeka PPLG", icon: "GraduationCap", level: "Expert" },
-      { name: "Guru Penggerak (CGP)", icon: "Award", level: "Certified" },
+      { name: "Guru Penggerak Angkatan 10", icon: "Award", level: "Certified" },
       { name: "Manajemen TEFA DKV", icon: "Briefcase", level: "Lead" },
       { name: "Pembimbingan LKS & Project", icon: "Target", level: "Mentor" }
     ]

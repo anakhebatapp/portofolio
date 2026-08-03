@@ -67,7 +67,7 @@ export default function Navbar() {
                   Wendra Bagas
                 </span>
                 <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">
-                  S.Kom
+                  S.Pd
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-medium tracking-wide">

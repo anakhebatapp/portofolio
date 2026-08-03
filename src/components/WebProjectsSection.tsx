@@ -53,13 +53,24 @@ export default function WebProjectsSection() {
                 </div>
 
                 {/* Card Visual Header Banner */}
-                <div className={`relative h-44 w-full bg-gradient-to-br ${project.imageBg} p-6 flex flex-col justify-between overflow-hidden group-hover:scale-[1.02] transition-transform duration-300`}>
+                <div className={`relative h-48 w-full bg-gradient-to-br ${project.imageBg} overflow-hidden group-hover:scale-[1.02] transition-transform duration-300`}>
                   
-                  {/* Subtle Grid Overlay */}
-                  <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+                  {/* Real Screenshot */}
+                  {project.screenshot ? (
+                    <img 
+                      src={project.screenshot} 
+                      alt={`Screenshot ${project.title}`}
+                      className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+                  )}
+                  
+                  {/* Dark overlay for text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
                   
                   {/* Top Badges */}
-                  <div className="relative z-10 flex items-center justify-between">
+                  <div className="relative z-10 flex items-center justify-between p-4">
                     <span className="px-2.5 py-1 rounded-md bg-slate-950/80 text-white text-[11px] font-bold border border-white/10 backdrop-blur-md">
                       {project.role}
                     </span>
@@ -72,17 +83,17 @@ export default function WebProjectsSection() {
                   </div>
 
                   {/* Project Title Badge inside banner */}
-                  <div className="relative z-10 space-y-1">
-                    <div className="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white mb-2 overflow-hidden p-1">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1">
+                    <div className="w-9 h-9 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white mb-1.5 overflow-hidden p-1">
                       {project.id === 'epkl' ? (
                         <img src="/images/logo-epkl.png" alt="Logo ePKL" className="w-full h-full object-contain" />
                       ) : project.id === 'ppdb-smk' ? (
                         <img src="/images/logo-smk.png" alt="Logo SMKN 1 Kawunganten" className="w-full h-full object-contain" />
                       ) : (
-                        <Laptop className="w-5 h-5 text-sky-300" />
+                        <Laptop className="w-4 h-4 text-sky-300" />
                       )}
                     </div>
-                    <h3 className="font-extrabold text-lg text-white drop-shadow-md leading-tight">
+                    <h3 className="font-extrabold text-base text-white drop-shadow-md leading-tight">
                       {project.title}
                     </h3>
                   </div>

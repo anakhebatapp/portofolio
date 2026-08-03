@@ -65,6 +65,34 @@ export default function TechStackSection() {
           ))}
         </div>
 
+        {/* Adobe Certified Professional Banner */}
+        <div className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-rose-950/40 via-purple-950/40 to-slate-900 border border-rose-500/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-rose-500 to-purple-600 p-0.5 shrink-0 shadow-lg shadow-rose-500/20">
+              <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-rose-400 font-extrabold text-xl">
+                Ai
+              </div>
+            </div>
+            <div className="space-y-1 text-center sm:text-left">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-400 text-[10px] font-bold border border-rose-500/20">
+                <Award className="w-3 h-3" />
+                <span>Lisensi & Sertifikasi Resmi</span>
+              </div>
+              <h3 className="font-extrabold text-lg text-white">Adobe Certified Professional — Graphic Design & Illustration</h3>
+              <p className="text-xs text-slate-300">Sertifikasi internasional resmi kompetensi Desain Grafis & Ilustrasi dari Adobe.</p>
+            </div>
+          </div>
+
+          <a
+            href="/certificates/sertifikat-adobe-graphic-design.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-400 hover:to-purple-500 text-white font-bold text-xs shadow-lg shadow-rose-500/20 transition-all hover:scale-[1.02] shrink-0"
+          >
+            <span>Lihat Sertifikat PDF</span>
+          </a>
+        </div>
+
       </div>
     </section>
   );

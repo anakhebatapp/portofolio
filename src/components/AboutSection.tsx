@@ -7,9 +7,9 @@ export default function AboutSection() {
   const pillars = [
     {
       icon: GraduationCap,
-      title: "Pendidik PPLG & CGP",
+      title: "Pendidik PPLG & Guru Penggerak",
       color: "from-sky-500 to-blue-600",
-      desc: "Mengajar pemrograman dasar hingga lanjut di SMKN 1 Kawunganten. Berkomitmen menciptakan pembelajaran berpusat pada murid melalui Program Calon Guru Penggerak."
+      desc: "Mengajar pemrograman dasar hingga lanjut di SMKN 1 Kawunganten. Berkomitmen menciptakan pembelajaran berpusat pada murid melalui Program Guru Penggerak Angkatan 10."
     },
     {
       icon: Code2,
@@ -33,11 +33,12 @@ export default function AboutSection() {
 
   const highlights = [
     "Guru Kejuruan Pengembangan Perangkat Lunak dan Gim (PPLG)",
-    "Calon Guru Penggerak (CGP) Angkatan 11 Kabupaten Cilacap",
+    "Guru Penggerak Angkatan 10 Kabupaten Cilacap",
     "Pengembang Utama Sistem ePKL v3 SMKN 1 Kawunganten",
     "Lead Developer Platform LMS Sustainable Financial Literacy (UNY)",
     "Pencipta 3 Aplikasi Android Publik di Google Play Store",
-    "Pembimbing Unit Usaha Teaching Factory (TEFA DKV)"
+    "Pembimbing Unit Usaha Teaching Factory (TEFA DKV)",
+    "Adobe Certified Professional — Graphic Design & Illustration"
   ];
 
   return (
@@ -89,7 +90,7 @@ export default function AboutSection() {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                <span>Calon Guru Penggerak yang aktif menggerakkan komunitas praktisi pendidik.</span>
+                <span>Guru Penggerak Angkatan 10 yang aktif menggerakkan komunitas praktisi pendidik.</span>
               </li>
             </ul>
           </div>

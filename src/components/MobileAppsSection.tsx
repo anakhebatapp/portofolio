@@ -46,26 +46,36 @@ export default function MobileAppsSection() {
                   <div className="w-16 h-3 bg-slate-800 mx-auto rounded-b-md mb-2" />
 
                   {/* App Screen Interior */}
-                  <div className={`w-full h-[calc(100%-1.25rem)] rounded-[20px] bg-gradient-to-br ${app.imageBg} p-4 flex flex-col justify-between text-white relative`}>
+                  <div className={`w-full h-[calc(100%-1.25rem)] rounded-[20px] bg-gradient-to-br ${app.imageBg} overflow-hidden relative`}>
                     
-                    <div className="space-y-2 text-center pt-2">
-                      <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md mx-auto flex items-center justify-center text-white shadow-md overflow-hidden p-1.5">
-                        {app.id === 'epkl-mobile' ? (
-                          <img src="/images/logo-epkl.png" alt="Logo ePKL Mobile" className="w-full h-full object-contain" />
-                        ) : (
-                          <Smartphone className="w-6 h-6" />
-                        )}
+                    {/* Real Screenshot */}
+                    {app.screenshot ? (
+                      <img 
+                        src={app.screenshot} 
+                        alt={`Screenshot ${app.title}`}
+                        className="absolute inset-0 w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="w-full h-full p-4 flex flex-col justify-between text-white">
+                        <div className="space-y-2 text-center pt-2">
+                          <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md mx-auto flex items-center justify-center text-white shadow-md overflow-hidden p-1.5">
+                            <Smartphone className="w-6 h-6" />
+                          </div>
+                          <div className="font-extrabold text-xs leading-tight drop-shadow-sm">{app.title.split('—')[0]}</div>
+                        </div>
                       </div>
-                      <div className="font-extrabold text-xs leading-tight drop-shadow-sm">{app.title.split('—')[0]}</div>
-                    </div>
+                    )}
 
-                    <div className="bg-slate-950/70 backdrop-blur-md p-2 rounded-xl text-[10px] text-slate-200 text-center space-y-1">
-                      <div className="flex justify-center text-amber-400 gap-0.5">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
-                        ))}
+                    {/* Bottom overlay with app name */}
+                    <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 to-transparent p-2 pt-6">
+                      <div className="bg-slate-950/70 backdrop-blur-md p-2 rounded-xl text-[10px] text-slate-200 text-center space-y-1">
+                        <div className="flex justify-center text-amber-400 gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
+                          ))}
+                        </div>
+                        <div className="font-bold">Play Store Verified</div>
                       </div>
-                      <div className="font-bold">Play Store Verified</div>
                     </div>
 
                   </div>
